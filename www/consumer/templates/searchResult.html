@@ -1,0 +1,45 @@
+<ion-view>
+	<ion-nav-title>
+	  <img class="hearedLogo" src="img/logo.png">
+	</ion-nav-title>
+    <ion-content>
+		<div class="searchResultPage">
+			<div class="pageTitle">
+				<div class="pageTitleTxt">Search Result</div>
+				<div class="pageTitleLine"></div>
+			</div>
+			<ion-list ><!-- class="animate-ripple" -->
+				<ion-item nav-clear menu-close class="item-icon-right item-avatar" ng-repeat="yaal in yaals">
+					<img ng-src="{{imgConatiner}}{{yaal.img}}">
+					<div class="actDetails clearfix">
+						<div class="marineInfo pull-left">
+							<div class="vendorName">{{yaal.vendor_name}} </div>
+							<div class="vendorRatingStar starRatingSmall starRatingSmall_3"></div>
+							<div class="perHourRent">Rent : <br/>KD {{yaal.pricing}}</div>
+							<div class="btnVendorDetail"><a ui-sref="app.searchDetail({slug: '{{yaal.slug}}'})">View Details &gt</a></div>
+						</div>
+						<div class="activityInfo pull-right">
+							<div class="activityInfoTitle">Activities</div>
+							<ul>
+								<li ng-repeat="(key, value) in yaal.addon_activity">{{key}}({{value}} KD)</li>
+							</ul>
+						</div>
+					</div>
+			
+				</ion-item>
+			</ion-list>
+
+		</div>
+		<br />
+        <br />
+        <br />
+    </ion-content>
+			<div class="searchresultPageBtn">
+				<button class="button button-block button-calm ink btnSort" data-ink-color="#9DEAFF" data-ink-opacity="1">
+					Sort
+				</button>
+				<button class="button button-block button-calm ink btnFilter" data-ink-color="#9DEAFF" data-ink-opacity="1">
+					Filter
+				</button>
+			</div>
+</ion-view>

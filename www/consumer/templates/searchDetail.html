@@ -1,0 +1,269 @@
+<ion-view>
+	<ion-nav-title>
+	  <img class="hearedLogo" src="img/logo.png">
+	</ion-nav-title>
+    <ion-content>
+		<div class="marineDetailPage">
+			
+		<div id="imgSlider" class="imgSlider">
+			<div class="item"><img src="img/marineImage.jpg" alt="img1"></div>
+			<div class="item"><img src="img/marineImage.jpg" alt="img2"></div>
+			<div class="item"><img src="img/marineImage.jpg" alt="img3"></div>
+			<div class="item"><img src="img/marineImage.jpg" alt="img4"></div>
+		</div>
+		
+		<!-- <div class="mdBlock1 clearfix">
+			<div class="marineInfo pull-left">
+				<div class="vendorName">Vendor Name </div>
+				<div class="vendorRatingStar starRating starRatingl_3"></div>
+
+				<div class="vendorRatingtxt">
+					<span class="vendorRatingtxtNum">3.0</span>
+					<span class="vendorRatingtxtName">Very Good</span>
+				</div>
+				<div class="perHourRent">Rent : $126.00/Hr</div>
+			</div>
+			<div class="marineLocationInfo pull-right">
+			</div>
+		</div> -->
+		
+		<div class="row bar_abs">
+		<div class="col pull_left">	<div class="vendorName">{{marine.vendor_name}} </div></div>
+		<div class="col pull_right"><div class="vendorRatingStar starRating starRatingl_3"></div></div>
+		</div>
+		
+		<div class="mdBlock2 clearfix pad54">
+			<div class="specificationTitle">Specification</div>
+			<div class="space spacer15"></div>
+			<div class="specifications">
+				<div class="row">
+					<div class="col  col-35 line_border1">
+						<span class="listTitle">Capacity : </span>
+						<span class="listData">{{marine.capacity}}</span>
+					</div>
+					<div class="col col-45 line_border2">
+						<span class="listTitle">Size : </span>
+						<span class="listData">{{marine.size}}</span>
+					</div>
+					<div class="col col-20">
+						<span class="listTitle">Cabin : </span>
+						<span class="listData">{{marine.cabin}}</span>
+					</div>
+				
+				</div>
+				<div class="row">
+					<div class="col col-35 line_border1">
+						<span class="listTitle">Beam : </span>
+						<span class="listData">{{marine.beam}} Meters</span>
+					</div>
+					<div class="col col-45 line_border2">
+						<span class="listTitle">Speed : </span>
+						<span class="listData">{{marine.speed}} knots</span>
+					</div>
+					<div class="col col-20"></div>
+				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<div class="col col-50">
+					<label>Source:</label>
+					<select class="form-control">
+						<option></option>
+					</select>
+				</div>
+				<div class="col col-50">
+					<label>Destination:</label>
+					<select class="form-control">
+						<option></option>
+					</select>
+				</div>				
+			</div>
+			<div class="row">
+				<div class="col col-50">
+					<label>Starting Time:</label>
+					<select class="form-control">
+						<option></option>
+					</select>
+				</div>
+				<div class="col col-50">
+					<label>Offers:</label>
+					<select class="form-control">
+						<option></option>
+					</select>
+				</div>
+			</div>
+			<div class="space spacer15"></div>
+			<div class="row">
+			<div class="col">
+			<div class="box item1">Description</div>
+			<div class="div_content1">{{marine.description}}</div>
+			</div>
+			</div>
+			
+			<div class="row">
+			<div class="col">
+			<div class="box item2">Free Food</div>
+			<div class="div_content2 display_none" ng-repeat="fSer in marine.free_service">{{fSer.service}}</div>
+			</div>
+			</div>
+			
+				<div class="row">
+			<div class="col">
+			<div class="box item3">Free Activity</div>
+			<div class="div_content3 display_none" ng-repeat="fAct in marine.free_activity">{{fSer.activity}}</div>
+			</div>
+			</div>
+			
+			
+			
+				<div class="row">
+			<div class="col">
+			<div class="box item4">Paid Food</div>
+			<div class="div_content4 display_none">
+			
+				<div class="servicesContents1">
+				<ul>
+					<li ng-repeat="pSer in marine.paid_service">
+						<input type="checkbox"> {{pSer.service}} ( KW {{pSer.price}} )
+					</li>
+					
+				</ul>
+			</div>
+			
+			</div>
+			</div>
+			</div>
+			
+					<div class="row">
+			<div class="col">
+			<div class="box item5">Reviews</div>
+			<div class="div_content5 display_none">Lorum Ispurm</div>
+			</div>
+			</div>
+				<div class="row">
+			<div class="col">
+			<button class="button button-calm ink btnSort" data-ink-color="#9DEAFF" data-ink-opacity="1" data-ng-click="booknow();">
+			Book $50.00
+		</button>
+		</div>
+		</div>
+		</div>
+		
+
+	<!-- 	
+		<div class="servicesFree clearfix">
+			<div class="servicesTitle">WHAT'S INCLUDED </div>
+			<div class="pageTitleLine"></div>
+			<div class="servicesSubtitle">FREE PRODUCT</div>
+			<div class="servicesContents">
+				<ul>
+					<li>
+						<input type="checkbox" type="checkbox" disabled="disabled" checked="checked"> item 1
+					</li>
+					<li>
+						<input type="checkbox" type="checkbox" disabled="disabled" checked="checked"> item 1
+					</li>
+					<li>
+						<input type="checkbox" type="checkbox" disabled="disabled" checked="checked"> item 1
+					</li>
+					<li>
+						<input type="checkbox" type="checkbox" disabled="disabled" checked="checked"> item 1
+					</li>
+					<li>
+						<input type="checkbox" type="checkbox" disabled="disabled" checked="checked"> item 1
+					</li>
+					<li>
+						<input type="checkbox" type="checkbox" disabled="disabled" checked="checked"> item 1
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="servicesPaid clearfix">
+			<div class="servicesTitle">PAID PRODUCT</div>
+			<div class="pageTitleLine"></div>
+			<div class="servicesContents">
+				<ul>
+					<li>
+						<input type="checkbox"> item 1
+					</li>
+					<li>
+						<input type="checkbox"> item 1
+					</li>
+					<li>
+						<input type="checkbox"> item 1
+					</li>
+					<li>
+						<input type="checkbox"> item 1
+					</li>
+					<li>
+						<input type="checkbox"> item 1
+					</li>
+					<li>
+						<input type="checkbox"> item 1
+					</li>
+				
+				</ul>
+			</div>
+		</div>
+
+		
+		<div class="mdBlock4 clearfix">
+			<div class="blChanhge startDate">
+				<div class="image">
+				</div>
+				<div class="title">
+					Start Date
+				</div>
+				<div class="subtitle">
+					20/09/2016
+				</div>
+			</div>
+			<div class="blChanhge startTime">
+				<div class="image">
+				</div>
+				<div class="title">
+					5 Hours Rent
+				</div>
+				<div class="subtitle">
+					20/09/2016
+				</div>
+			</div>
+			<div class="blChanhge paidProdCount">
+				<div class="image">
+				</div>
+				<div class="title">
+					Paid Product
+				</div>
+				<div class="subtitle">
+					$125.00
+				</div>
+			</div>
+		</div>
+		 -->
+
+		
+
+    </ion-content>
+	
+</ion-view>
+
+<script>
+$(document).ready(function(){
+   $(".item1").click(function(event){
+     $(".div_content1").toggle();
+   });
+      $(".item2").click(function(event){
+     $(".div_content2").toggle();
+   });
+      $(".item3").click(function(event){
+     $(".div_content3").toggle();
+   });
+      $(".item4").click(function(event){
+     $(".div_content4").toggle();
+   });
+      $(".item5").click(function(event){
+     $(".div_content5").toggle();
+   });
+ });
+</script>

@@ -1,0 +1,130 @@
+<ion-view view-title="Messages">
+  <ion-content>
+  	<div class="section-header">
+  		<h4 class="section-title">{{category.catName}}</h4>
+  		<div class="section-divider-wrap">
+            <div class="section-divider"></div>
+        </div>	
+  	</div>
+    
+
+    <div class="card-detail-item" data-ng-repeat="(key,card) in category.categoryData track by $index" data-ng-click="viewDetails();">
+	  <div class="item item-text-wrap no-padding">
+	   
+  		<div id="CategoryDtlSlider_{{$index}}" class="owl-carousel" data-ng-repeat="img in imgArr" data-ng-if="img.imageCard == card.name">
+			<div class="item" data-ng-repeat="imgUrl in img.imageArr">
+				<div>
+					<img src="http://yaal.technofox.co.in/assets/uploads/{{imgUrl}}" alt="{{imgUrl}}">
+				</div>
+			</div>
+		</div>
+	   
+	   
+		<div class="row">
+		  <div class="col col-75"><span>{{card.name}}</span></div>
+		  <div class="col col-25 col-right"><span class="calm">$250.00</span></div>	  
+		</div>
+		<div class="row">
+		  <div class="col col-60"> 
+			<span class="starRating starRating_{{card.rating}}"></span>
+		  	<!-- <i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<span> / 10 Review</span> -->
+		  </div>
+		  <div class="col col-40 col-right"><button class="button button-small button-calm button-detail" ui-sref="app.product">View Details</button></div>  
+		</div>
+	  </div>
+	</div>
+	
+<!-- 
+	<div class="card-detail-item">
+	  <div class="item item-text-wrap no-padding">
+	    <img class="responsive-image" src="img/item-img-1.jpg">
+		<div class="row">
+		  <div class="col col-75"><span>Yaal Name</span></div>
+		  <div class="col col-25 col-right"><span class="calm">$250.00</span></div>	  
+		</div>
+		<div class="row">
+		  <div class="col col-60"> 
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<span> / 10 Review</span>
+		  </div>
+		  <div class="col col-40 col-right"><button class="button button-small button-calm button-detail">View Details</button></div>  
+		</div>
+	  </div>
+	</div>
+
+	<div class="card-detail-item">
+	  <div class="item item-text-wrap no-padding">
+	    <img class="responsive-image" src="img/item-img-1.jpg">
+		<div class="row">
+		  <div class="col col-75"><span>Yaal Name</span></div>
+		  <div class="col col-25 col-right"><span class="calm">$250.00</span></div>	  
+		</div>
+		<div class="row">
+		  <div class="col col-60"> 
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<span> / 10 Review</span>
+		  </div>
+		  <div class="col col-40 col-right"><button class="button button-small button-calm button-detail">View Details</button></div>  
+		</div>
+	  </div>
+	</div>
+
+	<div class="card-detail-item">
+	  <div class="item item-text-wrap no-padding">
+	    <img class="responsive-image" src="img/item-img-1.jpg">
+		<div class="row">
+		  <div class="col col-75"><span>Yaal Name</span></div>
+		  <div class="col col-25 col-right"><span class="calm">$250.00</span></div>	  
+		</div>
+		<div class="row">
+		  <div class="col col-60"> 
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<span> / 10 Review</span>
+		  </div>
+		  <div class="col col-40 col-right"><button class="button button-small button-calm button-detail">View Details</button></div>  
+		</div>
+	  </div>
+	</div>
+
+	<div class="card-detail-item">
+	  <div class="item item-text-wrap no-padding">
+	    <img class="responsive-image" src="img/item-img-1.jpg">
+		<div class="row">
+		  <div class="col col-75"><span>Yaal Name</span></div>
+		  <div class="col col-25 col-right"><span class="calm">$250.00</span></div>	  
+		</div>
+		<div class="row">
+		  <div class="col col-60"> 
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<i class="icon ion-ios-star"></i>
+		  	<span> / 10 Review</span>
+		  </div>
+		  <div class="col col-40 col-right"><button class="button button-small button-calm button-detail">View Details</button></div>  
+		</div>
+	  </div>
+	</div>
+
+	 -->
+	
+  </ion-content>
+</ion-view>

@@ -1,0 +1,277 @@
+<ion-view>
+<ion-nav-title>
+      <img src="img/head-logo.png">
+</ion-nav-title>
+<ion-content>
+<!-- <div ng-repeat="(key, value) in data">
+<div ng-repeat="(key1, value1) in value">
+
+{{value1.name}}
+
+
+</div>
+</div> -->
+<style>
+
+</style>
+
+
+
+  <div class="bar item-input-inset">
+  	<label class="item-input-wrapper textbox-search">
+  		<i class="icon ion-ios-search placeholder-icon"></i>
+  		<input type="search" placeholder="Search"></input>
+  	</label>
+  </div>
+  <div data-ng-if="recordFound" data-ng-repeat="(key,card) in searchResult track by $index">
+	<div class="card" data-ng-click="openProduct('{{card.marine_slug}}');">
+	<div class="row vendor-card">
+	<div class="col">
+	<img style="width: 100% ;height: auto;" ng-src="{{imageContainer}}{{card.img_path}}">
+	</div>
+	<div class="col">
+	<label><strong>{{card.marine_name}}</strong></label>
+	<div>
+	<span class="starRating starRating_{{card.rating}}"></span>
+	</div>
+	<!-- <div>
+
+	<i class="icon icon-left ion-ios-star color-star"></i>
+	<i class="icon icon-left ion-ios-star color-star"></i>
+	<i class="icon icon-left ion-ios-star color-star"></i>
+	<i class="icon icon-left ion-ios-star-half  color-star"></i>
+	<i class="icon icon-left ion-ios-star"></i>
+	</div> -->
+	<div class="rating-box">
+	<label class="rating-num"><strong>{{card.rating}}</strong></label>
+	<label class="rating-text" style="font-size: 12px">Very Good</label>
+	</div>
+	<div>
+	<label>Rent:
+		<span data-ng-if="searchP.selectGroup == 'individual'">{{card.person_price}}</span>
+		<span data-ng-if="searchP.selectGroup == 'group'">{{card.group_price}}</span>
+	</label>
+	</div>
+	</div>
+	<div class="col">
+	<label><strong>Activities</strong></label>
+	<ul>
+	<li data-ng-repeat="valActy in card.activity">
+	<span data-ng-repeat="(keyAct,valAct) in activities">
+	<span data-ng-if="valActy == valAct.id">{{valAct.name}}</span>
+	</span>
+	</li>
+
+	<!-- <li>Cruise</li>
+	<li>Jetski</li>
+	<li>Fishing</li>
+	<li>Spare</li>
+	<li>Island</li>
+	<li>Fishing</li> -->
+	</ul>
+	</div>	
+	</div>
+	</div>
+  </div>
+  <div data-ng-if="!recordFound">
+	No record found !!
+  </div>
+
+<!--   
+  <div class="card">
+  	<div class="row vendor-card">
+  		<div class="col">
+  			<img style="width: 100% ;height: auto;" src="img/search1.png">
+  		</div>
+  		<div class="col">
+  			<label><strong>Vendor Name</strong></label>
+  			<div>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star-half  color-star"></i>
+          	</div>
+          	<div class="rating-box">
+          		<label class="rating-num"><strong>4.5</strong></label>
+          		<label class="rating-text" style="font-size: 12px">Very Good</label>
+          	</div>
+          	<div>
+          		<label>Rent: $126.00</label>
+          	</div>
+  		</div>
+  		<div class="col">
+  			<label><strong>Activities</strong></label>
+  					<ul>
+  						<li>Cruise</li>
+  						<li>Jetski</li>
+  		
+  						<li>Fishing</li>
+  						<li>Spare</li>
+  					
+  						<li>Island</li>
+  						<li>Fishing</li>
+  					</ul>
+  		</div>	
+  	</div>
+  </div>
+  <div class="card">
+  	<div class="row vendor-card">
+  		<div class="col">
+  			<img style="width: 100% ;height: auto;" src="img/search1.png">
+  		</div>
+  		<div class="col">
+  			<label><strong>Vendor Name</strong></label>
+  			<div>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star-half  color-star"></i>
+          	</div>
+          	<div class="rating-box">
+          		<label class="rating-num"><strong>4.5</strong></label>
+          		<label class="rating-text" style="font-size: 12px">Very Good</label>
+          	</div>
+          	<div>
+          		<label>Rent: $126.00</label>
+          	</div>
+  		</div>
+  		<div class="col">
+  			<label><strong>Activities</strong></label>
+  					<ul>
+  						<li>Cruise</li>
+  						<li>Jetski</li>
+  		
+  						<li>Fishing</li>
+  						<li>Spare</li>
+  					
+  						<li>Island</li>
+  						<li>Fishing</li>
+  					</ul>
+  		</div>	
+  	</div>
+  </div>
+  <div class="card">
+  	<div class="row vendor-card">
+  		<div class="col">
+  			<img style="width: 100% ;height: auto;" src="img/search1.png">
+  		</div>
+  		<div class="col">
+  			<label><strong>Vendor Name</strong></label>
+  			<div>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star-half  color-star"></i>
+          	</div>
+          	<div class="rating-box">
+          		<label class="rating-num"><strong>4.5</strong></label>
+          		<label class="rating-text" style="font-size: 12px">Very Good</label>
+          	</div>
+          	<div>
+          		<label>Rent: $126.00</label>
+          	</div>
+  		</div>
+  		<div class="col">
+  			<label><strong>Activities</strong></label>
+  					<ul>
+  						<li>Cruise</li>
+  						<li>Jetski</li>
+  		
+  						<li>Fishing</li>
+  						<li>Spare</li>
+  					
+  						<li>Island</li>
+  						<li>Fishing</li>
+  					</ul>
+  		</div>	
+  	</div>
+  </div>
+  <div class="card">
+  	<div class="row vendor-card">
+  		<div class="col">
+  			<img style="width: 100% ;height: auto;" src="img/search1.png">
+  		</div>
+  		<div class="col">
+  			<label><strong>Vendor Name</strong></label>
+  			<div>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star-half  color-star"></i>
+          	</div>
+          	<div class="rating-box">
+          		<label class="rating-num"><strong>4.5</strong></label>
+          		<label class="rating-text" style="font-size: 12px">Very Good</label>
+          	</div>
+          	<div>
+          		<label>Rent: $126.00</label>
+          	</div>
+  		</div>
+  		<div class="col">
+  			<label><strong>Activities</strong></label>
+  					<ul>
+  						<li>Cruise</li>
+  						<li>Jetski</li>
+  		
+  						<li>Fishing</li>
+  						<li>Spare</li>
+  					
+  						<li>Island</li>
+  						<li>Fishing</li>
+  					</ul>
+  		</div>	
+  	</div>
+  </div>
+  <div class="card">
+  	<div class="row vendor-card">
+  		<div class="col">
+  			<img style="width: 100% ;height: auto;" src="img/search1.png">
+  		</div>
+  		<div class="col">
+  			<label><strong>Vendor Name</strong></label>
+  			<div>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star color-star"></i>
+                <i class="icon icon-left ion-ios-star-half  color-star"></i>
+          	</div>
+          	<div class="rating-box">
+          		<label class="rating-num"><strong>4.5</strong></label>
+          		<label class="rating-text" style="font-size: 12px">Very Good</label>
+          	</div>
+          	<div>
+          		<label>Rent: $126.00</label>
+          	</div>
+  		</div>
+  		<div class="col">
+  			<label><strong>Activities</strong></label>
+  					<ul>
+  						<li>Cruise</li>
+  						<li>Jetski</li>
+  		
+  						<li>Fishing</li>
+  						<li>Spare</li>
+  					
+  						<li>Island</li>
+  						<li>Fishing</li>
+  					</ul>
+  		</div>	
+  	</div>
+  </div>
+ -->
+  
+  </ion-content>
+
+  <!-- footer with button -->
+  <div class="bar bar-footer bar-calm">
+	  	<div class="button-bar">
+		  <a class="button button-clear ">Sort: <i class="ion-thumbsup"></i></a>
+		  <a class="button button-clear">Filter: <i class="ion-funnel"></i></a>	  
+		</div>
+  </div>	
+</ion-view>

@@ -1,0 +1,64 @@
+<ion-view hide-nav-bar="true">
+ 
+  <ion-content class="signup">
+   
+      <div class="row login-logo">
+      <div class="col"></div>
+      <div class="col"><img class="logo-size" src="img/logo.png"></div>
+      <div class="col"></div>
+        
+      </div>
+      <div class="list">
+        <h2 class="signup_heading">SIGN UP</h2>
+        <div class="login-head-wrap">
+          <div class="divider-wrap">
+            <div class="divider"></div>
+          </div>
+        </div>
+		<div class="error">{{error}}</div>
+		<form name="userReg" ng-submit="register()" novalidate>
+			<div class="input-custom">
+				<div class="list list-inset list-inset-margin-login">
+					<label class="item item-input">
+						<input class="text-input-center" type="email" placeholder="Email or UserName" data-ng-model="reg.email">
+					</label>
+				</div>
+				<div class="list list-inset list-inset-margin-login">
+					<label class="item item-input">
+						<input class="text-input-center" type="text" placeholder="User Name" data-ng-model="reg.name">
+					</label>
+				</div>
+				<div class="list list-inset list-inset-margin-login">
+					<label class="item item-input">
+						<input class="text-input-center" type="password" placeholder="Password" data-ng-model="reg.pass">
+					</label>
+				</div>
+				<div class="list list-inset list-inset-margin-login">
+					<label class="item item-input">
+						<input class="text-input-center" type="password" placeholder="Retype Password" data-ng-model="reg.rePass">
+					</label>
+				</div>
+			</div>
+			<div class="signup-button" style="text-align: center">
+				<button class="button icon-left ion-android-exit button-signup-page">
+					<strong>SignUp</strong>
+				</button>
+			</div>
+		</form>
+        <div class="login-head-wrap">
+          <div class="divider-wrap">
+            <div class="divider"></div>
+          </div>
+        </div>
+        <div style="text-align: center">
+          
+            <button class="button button-login-page signup-button-font" ui-sref="app.login">Have Already Account <a>Login Here</a></button>
+          
+        </div>
+        
+        
+        
+      </div>
+    
+  </ion-content>
+</ion-view>

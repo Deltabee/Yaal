@@ -1,0 +1,34 @@
+<ion-view>
+	<ion-nav-title>
+	  <img class="hearedLogo" src="img/logo.png">
+	</ion-nav-title>
+    <ion-content>
+		<div class="categoryPage">
+			<div class="pageTitle">
+				<div class="pageTitleTxt">Yaal Category</div>
+				<div class="pageTitleLine"></div>
+			</div>
+			<div class="categories clearfix">
+				<div class="categoryBox" ng-repeat="category in categories">
+					<a ui-sref="app.searchResult({date: '{{date}}',activity: '{{category.id}}', amenity:'0',type:'1' })" >
+						<div class="categoryImage">
+							<img ng-src="{{imgConatiner}}{{category.img_path}}" alt="fishing"/>
+						</div>
+						<div class="categorytext">
+							{{category.name}}
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<br />
+        <br />
+        <br />
+    </ion-content>
+</ion-view>
+<style type="text/css">
+img {
+    -webkit-user-drag: none;
+    max-width: 80%;
+}
+</style>

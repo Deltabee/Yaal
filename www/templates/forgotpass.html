@@ -1,0 +1,18 @@
+<ion-view hide-nav-bar="true"> 
+  <ion-content class="forgotpassword">
+	<div class="error">{{error}}</div>
+	<form name="userForm" ng-submit="submit()" novalidate>
+		<div class="input-custom">
+			<!-- USERNAME -->
+			<div class="list list-inset list-inset-margin-login">
+				<label class="item item-input">
+					<input class="text-input-center" type="text" placeholder="Email" ng-model="user.email" required ng-minlength="3" ng-maxlength="40">
+				</label>
+			</div>
+		</div>
+		<div class="login-button" style="text-align: center">
+			<button  type="submit" class="button icon-left ion-android-exit button-login-page">submit</button>
+		</div>
+	</form>  
+  </ion-content>
+</ion-view>

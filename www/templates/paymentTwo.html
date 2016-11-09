@@ -1,0 +1,100 @@
+<ion-view view-title="Step Two">
+<ion-nav-title>
+      <img ui-sref="app.category" src="img/head-logo.png">
+    </ion-nav-title>
+  <ion-content>
+    <div class="section-header">
+  		<h4 class="section-title">Finish Payment</h4>
+  		<div class="section-divider-wrap">
+            <div class="section-divider"></div>
+        </div>	
+  	</div>
+  	<div class="payment-option-wrpapper" >
+  		<div class="button-bar">
+		  <a class="button" ng-class="{ 'button-calm': isSet(1) }" ng-click="setTab(1)">Credit Card</a>
+		  <a class="button" ng-class="{ 'button-calm': isSet(2) }" ng-click="setTab(2)">Paypal</a>  
+		</div>	
+
+		<div class="optionOne" >
+			<h5><span class="green">Your Payment Total: $ 150.60 US</span></h5>
+			<p>The booking amount will be debited from your credit card once the booking is completed.</p>
+			<div class="form-wrapper" ng-show="isSet(1)">
+				<div class="list list-inset">
+				  <label class="item item-input">
+				    <input type="text" placeholder="Card Name Holder">
+				  </label>	  
+				</div>
+				<div class="list list-inset">
+				  <label class="item item-input">
+				    <select name="" id="" class="custom-select">
+				    	<option value="">Card Type</option>
+				    	<option value="">Visa</option>
+				    	<option value="">Master Card</option>		    	
+				    </select>
+				  </label>	  
+				</div>
+				<div class="list list-inset">
+				  <label class="item item-input">
+				    <input type="text" placeholder="Card Number">
+				  </label>	  
+				</div>
+				<div class="list list-inset">
+				  <label class="item item-input">
+				    <select name="" id="" class="custom-select">
+				    	<option value="">Expiry Month</option>
+				    	<option value="">Jan</option>
+				    	<option value="">Feb</option>		    	
+				    </select>
+				  </label>	  
+				</div>
+				<div class="list list-inset">
+				  <label class="item item-input">
+				    <select name="" id="" class="custom-select">
+				    	<option value="">Expiry Month</option>
+				    	<option value="">Jan</option>
+				    	<option value="">Feb</option>		    	
+				    </select>
+				  </label>	  
+				</div>
+				<div class="list list-inset">
+				  <label class="item item-input">
+				    <select name="" id="" class="custom-select">
+				    	<option value="">Expiry Year</option>
+				    	<option value="">2016</option>
+				    	<option value="">2017</option>		    	
+				    </select>
+				  </label>	  
+				</div>
+				<div class="list list-inset">
+				  <label class="item item-input">
+				    <input type="text" placeholder="CVV">
+				  </label>	  
+				</div>
+				<div class="terms-and-condition">
+				  <input type="checkbox" name="terms" class="terms" check>
+				  By submitting a booking request, you accept our terms and conditions as well as the cancellation policy.
+				</div>
+			</div>
+			<div ng-show="isSet(2)">
+				<p>After clicking 'Book Now' you will be directed to Paypal to complete payment. You 
+					must complete the process or the booking will not occur . Afterwards you will be 
+					redirected to us again</p>
+				<button class="button button-small button-calm button-book">Proceed to paypal</button>
+				<div class="terms-and-condition">
+				  <input type="checkbox" name="terms" class="terms" check>
+				  By submitting a booking request, you accept our terms and conditions as well as the cancellation policy.
+				</div>
+			</div>
+		</div> 
+  	</div>
+  	
+
+
+	
+
+	
+	<div class="text-center">
+		<button class="button button-small button-calm button-book"  ui-sref="app.paymentThree">Book Now</button>
+	</div>
+  </ion-content>
+</ion-view>

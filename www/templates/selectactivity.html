@@ -1,0 +1,73 @@
+<ion-view view-title="Select Activity">
+<ion-nav-title>
+      <img src="img/head-logo.png">
+</ion-nav-title>
+  <ion-content>
+<!--   {{msg}} -->
+    <div class="section-header">
+  		<h4 class="section-title">Select Activity</h4>
+  		<div class="section-divider-wrap">
+            <div class="section-divider"></div>
+        </div>	
+  	</div>
+	<div class="form-wrapper">
+		<div class="list list-inset">
+		  <label class="item item-input">
+			<select name="selectCategory" id="selectCategory" class="custom-select"  data-ng-model="searchP.selectCategory">
+				<option value="">Select Your Activity Category</option>
+				<option ng-repeat="option in data.categories" value="{{option.id}}">{{option.name}}</option>
+			</select>
+		  </label>	  
+		</div>
+		<div class="list list-inset">
+		  <label class="item item-input">
+		  <input type="date" placeholder="Select Date"  data-ng-model="searchP.selectDate">
+		  </label>	  
+		</div>
+		<div class="list list-inset">
+		  <label class="item item-input">
+			<select name="selectAmenities" id="selectAmenities" class="custom-select"  data-ng-model="searchP.selectAmenities">
+				<option value="">Select Your Amenities</option>
+				<option ng-repeat="option in data.amenities" value="{{option.id}}">{{option.name}}</option>
+			</select>
+		  </label>	  
+		</div>
+		<div class="list list-inset">
+		  <label class="item item-input">
+		    <select name="" id="" class="custom-select"  data-ng-model="searchP.selectGroup">
+		    	<option value="">Select Your Group</option>
+		    	<option value="group">Group</option>
+		    	<option value="individual">Individual</option>		    	
+		    </select>
+		  </label>	  
+		</div>
+	</div>
+	<div class="text-center">
+	<!-- ui-sref="app.vendor"  -->
+		<button class="button button-medium button-calm button-detail" data-ng-click="search();">Go</button>
+	</div>
+	<div class="text-center">
+		<button class="button button-clear" style="color: #aaa;margin-top: 15px;">OR</button>
+	</div>
+	<div class="text-center" style="margin-top: 20px;">
+		<button class="button button-large button-calm button-detail" ui-sref="app.category">MAIN MENU</button>
+	</div>
+  </ion-content>
+  <!-- <div class="">
+	  <ion-tabs class="tabs-stable tabs-icon-top">
+
+  <ion-tab title="Filters" icon-on="ion-ios-paper-outline" icon-off="ion-ios-paper-outline">
+    
+  </ion-tab>
+
+  <ion-tab title="Price Range" icon-on="ion-social-usd" icon-off="ion-social-usd">
+  
+  </ion-tab>
+
+  <ion-tab title="All Category" icon-on="ion-ios-home" icon-off="ion-ios-home">
+   
+  </ion-tab>
+
+</ion-tabs>
+  </div> -->
+</ion-view>

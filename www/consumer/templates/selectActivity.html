@@ -1,0 +1,63 @@
+<div class="loading">
+	<div class="loadingContainer">
+		<img class="logoImg" src="img/logo.png" />
+		<div class="loadingTxt">Loading...</div>
+		<div class="loadingImg">
+			<img src="img/loadingImg.png"/>
+		</div>
+	</div>
+</div>
+<div class="searchActivity">
+	<ion-view>
+		<ion-nav-title>
+	  <img class="hearedLogo" src="img/logo.png">
+		</ion-nav-title>
+		<ion-content>
+			<div class="searchActivityPage">
+				<div class="pageTitle">
+					<div class="pageTitleTxt">Select Activity</div>
+					<div class="pageTitleLine"></div>
+				</div>
+				<form class="searchActivityForm">
+					<div class="form-group">
+						<select class="selectActivity form-control" multiple data-live-search="true" title="Select Your Activity">
+							<option>Activit 1</option>
+							<option>Activit 2</option>
+							<option>Activit 3</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Select Date"/>
+					</div>
+					<div class="form-group">
+						<select class="selectGroup form-control" multiple data-live-search="true" title="Select Your Group">
+							<option>Group 1</option>
+							<option>Group 2</option>
+						</select>
+					</div>
+					<div class="btnGrp">
+						<button class="button button-block button-calm ink" data-ng-click="search()">
+							GO
+						</button>
+							OR
+						<button class="button button-block button-calm ink" data-ng-click="mainMenu()">
+							Main Menu
+						</button>
+					</div>
+				</form>
+			</div>
+			<br />
+			<br />
+			<br />
+		</ion-content>
+	</ion-view>
+</div>
+<script>
+
+$('.selectActivity').selectpicker({
+
+});
+$('.selectGroup').selectpicker({
+
+});
+</script>

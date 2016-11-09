@@ -1,0 +1,147 @@
+<ion-view view-title="Messages">
+<ion-nav-title>
+      <img src="img/head-logo.png">
+    </ion-nav-title>
+  <ion-content class="product">
+  <div class="row">
+  	<div class="col">
+  		<label><strong>Vendor: {{categoryData.marine.vendor_name}}</strong></label>
+  			<div class="list">
+                <span class="starRating starRating_{{categoryData.marine.rating}}"></span>
+          	</div>
+          	<div class="rating-box">
+          		<label class="rating-num"><strong>{{categoryData.marine.rating}}</strong></label>
+          		<label class="rating-text">Very Good</label>
+          	</div>
+          	<div>
+          		<label>Per Hour Rent 
+				<label>
+					<span data-ng-if="searchP.selectGroup == 'individual'">{{categoryData.marine_availibility[0].person_price}}</span>
+					<span data-ng-if="searchP.selectGroup == 'group'">{{categoryData.marine_availibility[0].group_price}}</span>
+				</label>
+				<!-- :{{categoryData.marine_availibility[0].person_price}}|{{categoryData.marine_availibility[0].group_price}}</label> -->
+          	</div>
+  	</div>
+  	
+  	<div class="col">
+	<div id="map" data-tap-disabled="true"></div>
+<!--   		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3848.0444846380246!2d73.89759391536066!3d15.319817463151885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc4432e6973cccb0f!2sUtorda+Beach!5e0!3m2!1sen!2sin!4v1471599197746" width="180" height="100" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+  	</div>
+  </div>
+  <div class="category-wrap">
+	  <div class="item item-text-wrap no-padding">
+	  
+  		<div id="slider" class="owl-carousel">
+			<div class="item" data-ng-repeat="img in imageArr">
+				<img src="http://yaal.technofox.co.in/assets/uploads/{{img}}" alt="The Last of us">
+			</div>
+		</div>
+		
+	  </div>
+  </div>
+  <div class="row">
+  	<div class="col"><label><strong>Specifications:</strong></label></div>
+  	<div class="col col-border-p">
+  		<div class="row">
+  			<div class="col label-blue-p"><label>Type:</label></div>
+  			<div class="col"><label>{{categoryData.marine.type}}</label></div>
+  		</div>
+  		<div class="row">
+  			<div class="col label-blue-p"><label>Beam:</label></div>
+  			<div class="col"><label>{{categoryData.marine.beam}}</label></div>
+  		</div>
+  	</div>
+  	<div class="col">
+  		<div class="row">
+  			<div class="col label-blue-p"><label>Size:</label></div>
+  			<div class="col"><label>{{categoryData.marine.size}}</label></div>
+  		</div>
+  		<div class="row">
+  			<div class="col label-blue-p"><label>Speed:</label></div>
+  			<div class="col"><label>{{categoryData.marine.speed}}</label></div>
+  		</div>
+  	</div>
+  </div>
+
+  <div class="card" style="text-align: center;">
+  	<h4><strong>What's Included</strong></h4>
+  	<div class="padding">
+  	<div class="product-divider-wrap">
+	  	<div class="divider-wrap-b">
+	            <div class="divider-p"></div>
+	    </div>
+    </div>
+    </div>
+
+    <label><strong>Free Products</strong></label>
+    <div class="row padding">
+    	<div class="col button icon-left ion-checkmark-circled checkmark-blue-p"><label class="checkmark-blue-p-text">MarianeProperty</label></div>
+    	<div class="col button icon-left ion-checkmark-circled checkmark-blue-p"><label class="checkmark-blue-p-text">MarianeProperty</label></div>
+    </div>
+    <div class="row padding">
+    	<div class="col button icon-left ion-checkmark-circled checkmark-blue-p"><label class="checkmark-blue-p-text">MarianeProperty</label></div>
+    	<div class="col button icon-left ion-checkmark-circled checkmark-blue-p"><label class="checkmark-blue-p-text">MarianeProperty</label></div>
+    </div>
+  </div>
+   <div class="card" style="text-align: center;">
+  	<h4><strong>Paid Products</strong></h4>
+  	<div class="padding">
+  	<div class="product-divider-wrap">
+	  	<div class="divider-wrap-b">
+	            <div class="divider-p"></div>
+	    </div>
+    </div>
+    </div>
+    <div class="row padding">
+    	<div class="col checkmark-blue-p">
+	    	<ion-list>
+			  <ion-checkbox>Lorem
+			  <label class="checkmark-blue-p">
+			  <strong> $50</strong>
+			  </label>
+			  </ion-checkbox>
+			  <ion-checkbox>Lorem
+			  <label class="checkmark-blue-p">
+			  <strong> $50</strong>
+			  </label>
+			  </ion-checkbox>
+			</ion-list>
+    	</div>
+    	<div class="col checkmark-blue-p">
+	    	<ion-list>
+			  <ion-checkbox>Lorem
+			  <label class="checkmark-blue-p">
+			  <strong> $50</strong>
+			  </label>
+			  </ion-checkbox>
+			  <ion-checkbox>Lorem
+			  <label class="checkmark-blue-p">
+			  <strong> $50</strong>
+			  </label>
+			  </ion-checkbox>
+			</ion-list>
+    	</div>
+    </div>
+  </div>
+  <div class="row" style="text-align: center;">
+  	<div class="col col-border-p">
+  		<div class="ion-android-calendar icon-size icon-blue-pb"></div>
+  		<label class="checkmark-blue-p-text"><strong>Start Date</strong></label><br>
+  		<label class="checkmark-blue-p-text">03/08/2016</label>
+  	</div>
+  	<div class="col col-border-p">
+  		<div class="ion-android-time icon-size icon-blue-pb"></div>
+  		<label class="checkmark-blue-p-text"><strong>Start Date</strong></label><br>
+  		<label class="checkmark-blue-p-text">03/08/2016</label>
+  	</div>
+  	<div class="col">
+  		<div class="ion-android-cart icon-size icon-blue-pb"></div>
+  		<label class="checkmark-blue-p-text"><strong>Start Date</strong></label><br>
+  		<label class="checkmark-blue-p-text">125.00</label>
+  	</div>
+  </div>
+  <!-- ui-sref="app.login" -->
+  <button class="button button-block icon-right ion-chevron-right button-calm" data-ng-click="bookNow();">Book Now</button>
+
+  </ion-content>
+</ion-view>

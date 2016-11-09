@@ -1,0 +1,35 @@
+<ion-view title="Login" id="page4" hide-nav-bar="true">
+    <ion-content padding="true" class=" bg1 manual-remove-top-padding has-header" scroll="true" hide-nav-bar="true">
+        <div class="row">
+            <div class="col">
+                <div class="pad-25">
+                    <button id="login-button5" class="button button-dark  button-block half-block" ui-sref="menu.vendorLogin" >Vendor Login</button>
+                    <div>
+                        <img src="img/head-logo.png" class="header_logo">
+                    </div>
+
+                    <h1 id="login-heading2" style="color:#ddd;font-weight:400;text-align:center;">Login</h1>
+                    <img src="img/rang_point.png" class="range_point"/>
+
+                    <!-- <button id="login-button7" class="button button-assertive  button-block half-block icon-left ion-email">Sign-in with Gmail</button>
+                    <button id="login-button8" class="button button-positive  button-block half-block icon-left ion-social-facebook" style="background: #3b5999;">Sign with facebook</button> -->
+                    <div class="errorMsg ng-hide" data-ng-show="error.msg">{{error.msg}}</div>
+                    <form id="login-form6" class="list">
+                        <!-- <h4 id="login-heading3" style="color:#FFFFFF;text-align:center;">OR</h4> -->
+                        <label class="item item-input" id="login-input3">
+                            <input type="email" placeholder="Your Email" ng-model="user.userName" style="text-align: center;">
+                        </label>
+                        <label class="item item-input" id="login-input4">
+                            <input type="password" placeholder="Password"  ng-model="user.password" style="text-align: center;">
+                        </label>
+                    </form>
+                    <a href ng-click="doLogin()" id="login-button3" class="button button-light button-large button-block half-block button-clear icon ion-log-in" >&nbsp;&nbsp;Login</a>
+
+                    <img src="img/rang_point.png" class="range_point"/>
+                    <a href="consumer/#/apps/regiseration" id="login-button6" style="font-size: 19px;padding:0;min-height: 28px;" class="button button-light  button-block half-block button-clear">&nbsp;&nbsp;Sign Up</a>
+                    <a href="consumer/#/apps/fPass" id="login-button6" style="font-size:12px;" class="button button-light  button-block half-block button-clear icon ">&nbsp;&nbsp;Forgot Password</a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

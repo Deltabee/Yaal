@@ -1,0 +1,30 @@
+<ion-view>
+	<ion-nav-title>
+	  <img class="hearedLogo" src="img/logo.png">
+	</ion-nav-title>
+
+    <ion-content>
+		<div class="addressPage">
+			<div class="pageTitle">
+				<div class="pageTitleTxt">Forgot Password</div>
+				<div class="pageTitleLine"></div>
+			</div>
+			<div class="errorMsg" data-ng-show="error">{{error}}</div>
+            <div class="successMsg" data-ng-show="success">{{success}}</div>
+			<form class="addressForm" name="forgetPassForm">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Email id</span>
+                    <input type="email" name="email" placeholder="Email Id" ng-model="userDetails.email" required="required">
+                    <p ng-show="forgetPassForm.email.$invalid && !forgetPassForm.email.$pristine" class="help-block">Please Enter Valid Email.</p>
+                </label>
+				<br/>
+				<button class="button button-block button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1" ng-click="forgetPass()" ng-disabled="forgetPassForm.$invalid">
+                    Submit
+                </button>
+			</form>
+		</div>
+		<br />
+        <br />
+        <br />
+    </ion-content>
+</ion-view>

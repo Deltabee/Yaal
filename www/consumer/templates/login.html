@@ -1,0 +1,60 @@
+<ion-view view-title="Login" hide-nav-bar="true">
+    <ion-content>
+		<!-- <div class="loginPageBg"></div> -->
+		<div class="loginPage">
+			
+			<div class="logo">
+				<img class="imgResponsive" src="img/logo.png" alt="Yaal"/>
+			</div>
+			<div class="loginTitle">
+				LOGIN
+			</div>
+			<div class="pageTitleLine"></div>
+			<!-- <div class="loginOptions">
+				<div class="loginGoogle">
+					<img class="imgResponsive" src="img/loginGoogle.jpg" alt="Login Google"/>					
+				</div>
+				<div class="loginFacebook">
+					<img class="imgResponsive" src="img/loginFacebook.jpg" alt="Login Facebook"/>					
+				</div>
+			</div> -->
+			<!-- <div class="orDivider">
+				<span class="orPreDivider"></span>
+				<span class="orTxt">OR</span>
+				<span class="orPostDivider"></span>
+			</div>
+		 -->
+			<div class="errorMsg ng-hide" data-ng-show="error.msg">{{error.msg}}</div>
+			<form class="loginForm">
+                <label class="item item-input item-floating-label">
+                    <span style="color: #fff;text-transform: uppercase;">Email</span>
+                    <input type="text" placeholder="Email" data-ng-model="user.userName">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span style="color: #fff;text-transform: uppercase;">password</span>
+                    <input type="password" placeholder="Password" data-ng-model="user.userPass">
+                </label>
+				<button class="button button-block button-calm ink btnLogin" data-ink-color="#9DEAFF" data-ink-opacity="1" data-ng-click="login()" style="width: auto;margin: 0 auto;margin-top: 5px;margin-bottom: 5px;">
+                    Login
+                </button>
+				<div class="pageTitleLine"></div>
+				<button class="button button-block button-calm ink btnSignUp" data-ng-click="signup()" style="width: auto;margin: 0 auto;margin-top: 5px;margin-bottom: 5px;">
+                    Signup
+                </button>
+				<button class="button button-block button-calm ink btnfpass" data-ng-click="forgotPass()" style="width: auto;margin: 0 auto;margin-top: 5px;margin-bottom: 5px;">
+                    Forgot Password
+                </button>
+				
+			
+			</form>	
+
+
+
+			
+			<br/>		
+			<br/>		
+			<br/>		
+			<br/>
+		</div>
+    </ion-content>
+</ion-view>

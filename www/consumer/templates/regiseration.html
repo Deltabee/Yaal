@@ -1,0 +1,47 @@
+<ion-view>
+	<ion-nav-title>
+	  <img class="hearedLogo" src="img/logo.png">
+	</ion-nav-title>
+    <ion-content>
+		<div class="addressPage">
+			<div class="pageTitle">
+				<div class="pageTitleTxt">Registration</div>
+				<div class="pageTitleLine"></div>
+			</div>
+            <div class="errorMsg" data-ng-show="error">{{error}}</div>
+            <div class="successMsg" data-ng-show="success">{{success}}</div>
+			<form class="addressForm" name="registrationForm">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">First Name</span>
+                    <input type="text" placeholder="First Name" name="firstName" ng-model="userDetails.firstName"  required="required">
+                    <p ng-show="registrationForm.firstName.$invalid && !registrationForm.firstName.$pristine" class="help-block">Please Enter First name.</p>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" placeholder="Last Name" name="lastName" ng-model="userDetails.lastName"  required="required">
+                    <p ng-show="registrationForm.lastName.$invalid && !registrationForm.lastName.$pristine" class="help-block">Please Enter Last name.</p>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Email id</span>
+                    <input type="email" placeholder="Email Id" name="email" ng-model="userDetails.email"  required="required">
+                    <p ng-show="registrationForm.email.$invalid && !registrationForm.email.$pristine" class="help-block">Please Enter Valid Email.</p>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Pasword</span>
+                    <input type="password" placeholder="Pasword" name="pass" ng-model="userDetails.pass" required="required">
+                    <p ng-show="registrationForm.pass.$invalid && !registrationForm.pass.$pristine" class="help-block">Please Enter Password.</p>
+                </label>
+				<br/>
+				<button class="button button-block button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1" ng-click="signUpUser()" ng-disabled="registrationForm.$invalid">
+                    Submit
+                </button>
+               <!--  <img src="../img/rang_point.png" class="range_point"/>
+                <a href="http://localhost:8100/#/login" id="login-button6" style="font-size: 19px;padding:0;min-height: 28px;" class="button button-light  button-block half-block button-clear">&nbsp;&nbsp;Login</a> -->
+			</form>
+            
+		</div>
+		<br />
+        <br />
+        <br />
+    </ion-content>
+</ion-view>
